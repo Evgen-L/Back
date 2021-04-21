@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+  <title>Lab 1 - calculate</title>
+ </head>
+ <body>
+
+ <form action="calc.php" method="POST" class="calc-form">
+     <input type="text" name="number_1">
+
+     <select name="operation">
+  	     <option value="+" > + </option>
+  	     <option value="-" > - </option>
+		 <option value="*" > * </option>
+		 <option value="/" > / </option>
+     </select>
+
+     <input type="text" name="number_2" >
+     <input type="submit" value="=">
+     <span><?php echo $result; ?></span>
+ </form>
+
+ </body>
+</html>
