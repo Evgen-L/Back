@@ -1,21 +1,10 @@
 
 <link rel="stylesheet" type="text/css" href="styles.css" />
 <?php
-    try 
-    {
-        
-            $con = new PDO('sqlsrv:Server=DESKTOP-9JUV7U6\SQLEXPRESS;Database=Lw2DB', NULL, NULL);
-            $request = $con->prepare('SELECT * FROM lw2T');
-            $request->execute();
-
-            
-    }
-    catch (PDOException $e)
-    {
-        echo "Suka?";
-        return $e;
-    }
-    ?>
+    $con = new PDO('sqlsrv:Server=DESKTOP-9JUV7U6\SQLEXPRESS;Database=Lw2DB', NULL, NULL);
+    $request = $con->prepare('SELECT * FROM lw2T');
+    $request->execute();
+?>
 <table class = "bordered">
     
    
