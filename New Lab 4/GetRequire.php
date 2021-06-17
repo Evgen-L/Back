@@ -134,7 +134,7 @@
 
         if (isset($_POST['sort_by']))
         {
-            if ($_POST['sort_by'] == "id" || $_POST['sort_by'] == "description" || $_POST['sort_by'] == "date start" || $_POST['sort_by'] == "date end" || $_POST['sort_by'] == "priority")
+            if ($_POST['sort_by'] == "id" || $_POST['sort_by'] == "description" || $_POST['sort_by'] == "date_start" || $_POST['sort_by'] == "date_end" || $_POST['sort_by'] == "priority")
             {
                 $sort_by = $_POST['sort_by']; 
             }
@@ -166,7 +166,6 @@
         
             
         $query = 'SELECT * FROM lw4T '.$whereCause.' ORDER BY '.$sort_by.' '.$type_sort.' OFFSET '.$start.' ROWS FETCH NEXT '.$limit.' ROWS ONLY';
-
        
 
         $request = $con->prepare($query);
